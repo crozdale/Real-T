@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="http://bitbrowze.com/real-t/static/css/main.f9f7cb6c.chunk.css" rel="stylesheet">
+	<link href="http://bitbrowze.com/real-t/static/css/2.f46c9330.chunk.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $(".actionbox1").click(function(){
+		    $(".actionbox1").removeClass('selected');
+		    $(this).addClass('selected');
+		  });
+
+		  $(".actionbox2").click(function(){
+		    $(".actionbox2").removeClass('selected');
+		    $(this).addClass('selected');
+		  });
+		});
+	</script>
+
+
+</head>
+	<body>
+		<div id="root">
+			<section class="Register_section__2t0JM">
+				<main class="MuiContainer-root jss1">
+					<h1 class="MuiTypography-root MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter">PRIMARY ROLES </h1>
+					<p class="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary MuiTypography-alignCenter" style="max-width: 80%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+				</main>
+				<main class="MuiContainer-root MuiContainer-maxWidthLg">
+					<div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-justify-xs-center">
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox1">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Proprietor</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox1">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Manager</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox1">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Landlord</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox1">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Seller</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<main class="MuiContainer-root jss1">
+					<h1 class="MuiTypography-root MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter">SUBSDIARY ROLES </h1>
+					<p class="MuiTypography-root MuiTypography-h6 MuiTypography-colorTextSecondary MuiTypography-alignCenter" style="max-width: 80%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+				</main>
+				<main class="MuiContainer-root MuiContainer-maxWidthLg">
+					<div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-justify-xs-center">
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox2">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Arbitrator</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox2">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Insurer</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox2">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Buyer</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+						<div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3">
+							<div class="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded actionbox actionbox2">
+								<div class="MuiCardHeader-root">
+									<div class="MuiCardHeader-content">
+										<h5 class="MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-alignCenter">Renter</h5>
+									</div>
+								</div>
+								<div class="MuiCardContent-root">
+									<ul>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum</li>
+										<li class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignCenter">Lorem Ipsum>
+									</ul>
+								</div>
+								<div class="MuiCardActions-root MuiCardActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth selectbtn" tabindex="0" type="button"><span class="MuiButton-label">Select</span><span class="MuiTouchRipple-root"></span></button></div>
+							</div>
+						</div>
+					</div>
+					<div class="row text-center mt-5">
+						<div class="col">
+							<a href="/form.html"><button class="btn nextbtn">Next</button></a>
+						</div>
+					</div>
+				</main>
+				<footer class="MuiContainer-root MuiContainer-maxWidthMd">
+					<!-- <div class="row">
+						<div class="col">
+							<iframe class="iframesec" src="https://www.yumpu.com/en/document/read/63142334/a-blockchain-based-smart-tenancy-agreement" height="500" width="500"></iframe>
+						</div>
+					</div> -->
+					<div class="MuiBox-root jss2 pt-5">
+						<p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter">Copyright © <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit" href="#">Real-T</a> 2020.</p>
+					</div>
+				</footer>
+			</section>
+		</div>
+	</body>
+</html>
