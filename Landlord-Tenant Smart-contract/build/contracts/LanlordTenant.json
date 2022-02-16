@@ -1,0 +1,640 @@
+{
+  "contractName": "LanlordTenant",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/LanlordTenant.sol\":\"LanlordTenant\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/Context.sol\":{\"keccak256\":\"0x4029dbcdd13edf8ccdf84b5ab23479ae725a1cdc21e1f8faa8a1e20d4dd9fb47\",\"urls\":[\"bzz-raw://056320bc46b5a3b947ed677501e3831935ef99691435c2bc66f812ca8947055d\",\"dweb:/ipfs/QmVaXiNVFijvXq3VCeXST9sWMdezqDTf4RXQJcA8TR32Sz\"]},\"/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/LanlordTenant.sol\":{\"keccak256\":\"0xebe2e1ae8c09543ed55f4f4ab8e86cee2601f2c7e28f3e79c061b31e68a0f5c1\",\"urls\":[\"bzz-raw://5830925599023278a7a24356d463c363c6165b5138ca9b24b844d69202be9e72\",\"dweb:/ipfs/Qmcy2fKUdmBTRJUCQ2z29cR93fmtA7HmmKyfiVZFtdruom\"]},\"/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/Ownable.sol\":{\"keccak256\":\"0x32becaa173a8b0634589287a7290b02f4ed67472ca3d80546cc2783827ea9d90\",\"urls\":[\"bzz-raw://b75834660ef146813d6ec1a18e5c7fc750c3db664d3a651f0dc1ea04da543ad3\",\"dweb:/ipfs/QmWrvKXKogva6zXJCDBjAXibBHrFJx55U3sBZbeQYPz1oW\"]},\"/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/SafeMath.sol\":{\"keccak256\":\"0xedb4f3734f2585a631045d6088e00c8bac6950639a8077df5f3d1eac41fd40c5\",\"urls\":[\"bzz-raw://1202f24a1347225c46da3254dac8fa1f6e7bcd322700471d4c8cea81292e26a3\",\"dweb:/ipfs/QmePx3owmUUpjKSJLyNd1a3j7PCKHRC7hZwjtj73dGV6mw\"]}},\"version\":1}",
+  "bytecode": "0x608060405260006100146100b760201b60201c565b9050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3506100bf565b600033905090565b61050b806100ce6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063715018a6146100465780638da5cb5b14610050578063f2fde38b1461009a575b600080fd5b61004e6100de565b005b610058610266565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061028f565b005b6100e6610364565b73ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146101a7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610297610364565b73ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610358576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6103618161036c565b50565b600033905090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156103f2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806104b16026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a72315820123af65a4221cb2acb298bfa1a93f395d97660e16e45e0dd9f7aab11a7228d3664736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063715018a6146100465780638da5cb5b14610050578063f2fde38b1461009a575b600080fd5b61004e6100de565b005b610058610266565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061028f565b005b6100e6610364565b73ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146101a7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b610297610364565b73ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610358576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b6103618161036c565b50565b600033905090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614156103f2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260268152602001806104b16026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373a265627a7a72315820123af65a4221cb2acb298bfa1a93f395d97660e16e45e0dd9f7aab11a7228d3664736f6c63430005100032",
+  "sourceMap": "84:1779:1:-;;;836:17:3;856:12;:10;;;:12;;:::i;:::-;836:32;;887:9;878:6;;:18;;;;;;;;;;;;;;;;;;944:9;911:43;;940:1;911:43;;;;;;;;;;;;802:159;84:1779:1;;744:96:0;789:15;823:10;816:17;;744:96;:::o;84:1779:1:-;;;;;;;",
+  "deployedSourceMap": "84:1779:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;84:1779:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1660:138:3;;;:::i;:::-;;1037:77;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1947:107;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1947:107:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;1660:138;1251:12;:10;:12::i;:::-;1241:22;;:6;;;;;;;;;;;:22;;;1233:67;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1759:1;1722:40;;1743:6;;;;;;;;;;;1722:40;;;;;;;;;;;;1789:1;1772:6;;:19;;;;;;;;;;;;;;;;;;1660:138::o;1037:77::-;1075:7;1101:6;;;;;;;;;;;1094:13;;1037:77;:::o;1947:107::-;1251:12;:10;:12::i;:::-;1241:22;;:6;;;;;;;;;;;:22;;;1233:67;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2019:28;2038:8;2019:18;:28::i;:::-;1947:107;:::o;744:96:0:-;789:15;823:10;816:17;;744:96;:::o;2155:226:3:-;2249:1;2229:22;;:8;:22;;;;2221:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2338:8;2309:38;;2330:6;;;;;;;;;;;2309:38;;;;;;;;;;;;2366:8;2357:6;;:17;;;;;;;;;;;;;;;;;;2155:226;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\nimport \"./SafeMath.sol\";\nimport \"./Ownable.sol\";\n\ncontract LanlordTenant is Ownable {\n\tusing SafeMath for uint256;\n\n\tenum contractStage {unsigned, signed, active, completed}\n\n\tstring contractClausesHASH;\n\n\taddress landlord;\n\taddress tenant;\n\taddress arbitror;\n\n\n\t/*\n    modifier onlyTenant() {\n        require(_tenant == _msgSender(), \"Ownable: caller is not the owner\");\n        _;\n    }\n\n\t\n\n\tfunction payDeposit() payable onlyTenant() atStage(ContractStage.SignedDepositRequired) {\n\n\t\t//Check the deposit is not being overpaid\n\t\tif (depositPaid + msg.value > totalDeposit) {\n\t\t\tthrow;\n\t\t}\n\t\tdepositPaid += msg.value;\n\t\tDepositPayment(msg.sender, msg.value);\n\t\tif (depositPaid == totalDeposit) {\n\t\t\tcurrentstage = ContractStage.Active;\n\t\t}\n\n\n\n\t}\n\n\tfunction withdrawRent() onlyLandlord() returns (bool) {\n\t\t\n\t\tvar amount = landlordRentToWithdraw;\n\t\tif (amount > 0) {\n\t\t\tlandlordRentToWithdraw = 0;\n\t\t\tif (!msg.sender.send(amount)) {\n\t\t\t\tlandlordRentToWithdraw = amount;\n\t\t\t\tRentWithdrawal(msg.sender, amount, false);\n\t\t\t\treturn false;\t\t\t\t\n\t\t\t}\n\t\t\tRentWithdrawal(msg.sender, amount, true);\n\t\t\treturn true;\n\t\t} else {\n\t\t\tthrow;\n\t\t}\n\n\t}\n\n\tfunction payRent(uint256 clientETHGBPInPence) payable onlyTenant() atStage(ContractStage.Active) {\n\t\tif (rentPaidInPence >= totalRentAmountInPence) {\n\t\t\tthrow;\n\t\t}\n\n\t\tvar oraclizeQueryPrice = oraclize.getPrice(\"URL\");\n\t\tvar rentSentInWei = msg.value - oraclizeQueryPrice;\n\n\t\tif (oraclizeQueryPrice >= msg.value) {\n\t\t\t// not enough ETH to cover the query fee\n\t\t\tthrow;\n\t\t} else {\n\t\t\tbyte32 queryID = oraclize_query(\"URL\", \"json(URL-ADDRESS-GBPtoETH\");\n\t\t\ttenantpayments[queryID] = RentPaymentInfo({\n\t\t\t\tprocessed: false,\n\t\t\t\tsender: msg.sender,\n\t\t\t\ttimestamp: now,\n\t\t\t\tclientETHGBPInPence: clientETHGBPInPence,\n\t\t\t\toracleETHGBPInPence: 0,\n\t\t\t\trentPaidInWei: rentSentInWei\n\t\t\t\t});\n\t\t}\n\t}\n*/\n\t\n\n}\n",
+  "sourcePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/LanlordTenant.sol",
+  "ast": {
+    "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/LanlordTenant.sol",
+    "exportedSymbols": {
+      "LanlordTenant": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 28,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 29,
+        "nodeType": "ImportDirective",
+        "scope": 50,
+        "sourceUnit": 383,
+        "src": "34:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 30,
+        "nodeType": "ImportDirective",
+        "scope": 50,
+        "sourceUnit": 196,
+        "src": "59:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 31,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 195,
+              "src": "110:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$195",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 32,
+            "nodeType": "InheritanceSpecifier",
+            "src": "110:7:1"
+          }
+        ],
+        "contractDependencies": [
+          26,
+          195
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49,
+          195,
+          26
+        ],
+        "name": "LanlordTenant",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 35,
+            "libraryName": {
+              "contractScope": null,
+              "id": 33,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 382,
+              "src": "127:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$382",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "121:27:1",
+            "typeName": {
+              "id": 34,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "canonicalName": "LanlordTenant.contractStage",
+            "id": 40,
+            "members": [
+              {
+                "id": 36,
+                "name": "unsigned",
+                "nodeType": "EnumValue",
+                "src": "171:8:1"
+              },
+              {
+                "id": 37,
+                "name": "signed",
+                "nodeType": "EnumValue",
+                "src": "181:6:1"
+              },
+              {
+                "id": 38,
+                "name": "active",
+                "nodeType": "EnumValue",
+                "src": "189:6:1"
+              },
+              {
+                "id": 39,
+                "name": "completed",
+                "nodeType": "EnumValue",
+                "src": "197:9:1"
+              }
+            ],
+            "name": "contractStage",
+            "nodeType": "EnumDefinition",
+            "src": "151:56:1"
+          },
+          {
+            "constant": false,
+            "id": 42,
+            "name": "contractClausesHASH",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "210:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 41,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "210:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 44,
+            "name": "landlord",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "240:16:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 43,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "240:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 46,
+            "name": "tenant",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "259:14:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 45,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "259:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 48,
+            "name": "arbitror",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "276:16:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 47,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "276:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 50,
+        "src": "84:1779:1"
+      }
+    ],
+    "src": "0:1864:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/LanlordTenant.sol",
+    "exportedSymbols": {
+      "LanlordTenant": [
+        49
+      ]
+    },
+    "id": 50,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 28,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/SafeMath.sol",
+        "file": "./SafeMath.sol",
+        "id": 29,
+        "nodeType": "ImportDirective",
+        "scope": 50,
+        "sourceUnit": 383,
+        "src": "34:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/jacg/realT/Landlord-Tenant Smart-contract/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 30,
+        "nodeType": "ImportDirective",
+        "scope": 50,
+        "sourceUnit": 196,
+        "src": "59:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 31,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 195,
+              "src": "110:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$195",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 32,
+            "nodeType": "InheritanceSpecifier",
+            "src": "110:7:1"
+          }
+        ],
+        "contractDependencies": [
+          26,
+          195
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 49,
+        "linearizedBaseContracts": [
+          49,
+          195,
+          26
+        ],
+        "name": "LanlordTenant",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 35,
+            "libraryName": {
+              "contractScope": null,
+              "id": 33,
+              "name": "SafeMath",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 382,
+              "src": "127:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SafeMath_$382",
+                "typeString": "library SafeMath"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "121:27:1",
+            "typeName": {
+              "id": 34,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "140:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "canonicalName": "LanlordTenant.contractStage",
+            "id": 40,
+            "members": [
+              {
+                "id": 36,
+                "name": "unsigned",
+                "nodeType": "EnumValue",
+                "src": "171:8:1"
+              },
+              {
+                "id": 37,
+                "name": "signed",
+                "nodeType": "EnumValue",
+                "src": "181:6:1"
+              },
+              {
+                "id": 38,
+                "name": "active",
+                "nodeType": "EnumValue",
+                "src": "189:6:1"
+              },
+              {
+                "id": 39,
+                "name": "completed",
+                "nodeType": "EnumValue",
+                "src": "197:9:1"
+              }
+            ],
+            "name": "contractStage",
+            "nodeType": "EnumDefinition",
+            "src": "151:56:1"
+          },
+          {
+            "constant": false,
+            "id": 42,
+            "name": "contractClausesHASH",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "210:26:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 41,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "210:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 44,
+            "name": "landlord",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "240:16:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 43,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "240:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 46,
+            "name": "tenant",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "259:14:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 45,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "259:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 48,
+            "name": "arbitror",
+            "nodeType": "VariableDeclaration",
+            "scope": 49,
+            "src": "276:16:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 47,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "276:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 50,
+        "src": "84:1779:1"
+      }
+    ],
+    "src": "0:1864:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1584962446487": {
+      "events": {},
+      "links": {},
+      "address": "0x95673828bb17744A205C97407B95feA364Bfe341",
+      "transactionHash": "0x3eb715538a88d4ce6df6a9fcbfc2fb3bcc3168ca3937f09e35ed7cfbb1fabd6f"
+    },
+    "1585833668533": {
+      "events": {
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x6041d6DFB3A5d8a62D32630E45Ff5237a3E63Bc5",
+      "transactionHash": "0x964f2d74431ad160fcff77deb0c352564b6c998ad7cafb54eb34b77943aac463"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-02T20:55:07.224Z",
+  "devdoc": {
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

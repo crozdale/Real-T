@@ -1,0 +1,83 @@
+{
+  "name": "token-front-end",
+  "version": "1.1.1",
+  "description": "realT token front-end to interact with token Smart Contract",
+  "main": "src/main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "copy:cname": "cp ./src/www/CNAME ./dist",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "build": "cross-env  NODE_ENV=production UV_THREADPOOL_SIZE=100 webpack --config webpack.config.prod",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --colors --config webpack.config",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crozdale/realT/token-front-end.git"
+  },
+  "keywords": [
+    "ethereum",
+    "ethereum-dapp",
+    "erc20",
+    "erc20-tokens",
+    "transfer",
+    "decentralized",
+    "dapp"
+  ],
+  "author": "https://github.com/crozdale/realT/token-front-end",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/crozdale/realT/token-front-end/issues"
+  },
+  "homepage": "https://172.104.14.197/",
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "autoprefixer": "^9.7.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.2",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "file-loader": "^4.3.0",
+    "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
+    "react-hot-loader": "^4.12.20",
+    "style-loader": "^1.1.3",
+    "url-loader": "^2.3.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "clipboard-copy": "^3.1.0",
+    "eth-contract-metadata": "git+https://github.com/MetaMask/eth-contract-metadata.git",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaf-carousel": "^1.2.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-toastify": "^5.5.0",
+    "semantic-ui-react": "^0.88.2",
+    "web3": "^1.2.6"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
