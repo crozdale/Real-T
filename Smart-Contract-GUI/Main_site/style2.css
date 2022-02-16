@@ -1,0 +1,19 @@
+.actionbox{cursor: pointer;}
+.selected{transform: scale(1.07);-o-transform: scale(1.07);-moz-transform: scale(1.07);-webkit-transform: scale(1.07);border: 1px solid #3f51b5;box-shadow: 0 0 10px #717171 !important;transition: all 0.5s ease;-o-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-webkit-transition: all 0.5s ease;}
+.nextbtn {color: #fff;box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);background-color: #3f51b5;min-width: 150px;text-transform: uppercase;}
+.nextbtn:hover {box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);background-color: #303f9f;color: #ffffff;}
+.selectbtn{outline: none !important;}
+.selected .selectbtn{background-color: #303f9f;box-shadow: none;border: 1px solid #fff;}
+.MuiPaper-root.selected {background: #303f9f;color: #fff;}
+.MuiPaper-root.selected .MuiTypography-colorTextPrimary{color: #ffffff;}
+
+.signupform .form-control {box-shadow: none;padding-left: 40px;border-radius: 7px;border-color: #e4e4e4;min-height: 40px;}
+.signupform {max-width: 350px;margin: 0 auto;}
+.field-inner{position: relative;}
+.field-inner .fa {position: absolute;top: 50%;transform: translate(0,-50%);-o-transform: translate(0,-50%);-moz-transform: translate(0,-50%);-webkit-transform: translate(0,-50%);left: 10px;font-size: 20px;color: #a0a0a0;}
+
+.signupform ::-webkit-input-placeholder {color: #a2a2a2;}
+.signupform ::-moz-placeholder {color: #a2a2a2;}
+.signupform :-ms-input-placeholder {color: #a2a2a2;}
+.signupform :-moz-placeholder {color: #a2a2a2;}
+.btn.submitbtn {background: #76B852;width: 100%;color: #fff;border-radius: 7px;min-height: 40px;}
