@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://bitbrowze.com/real-t/static/css/main.c860e462.chunk.css" rel="stylesheet">
+	<link href="https://bitbrowze.com/real-t/static/css/2.cae63205.chunk.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+	<body>
+		<div id="root">
+			<section class="Register_section__2t0JM">
+				<main class="MuiContainer-root MuiContainer-maxWidthLg">
+					<h4 class="MuiTypography-root MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter mt-5">LOGIN</h4>
+					<form class="signupform my-5">
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-envelope-o inputicon"></i>
+								<input class="form-control" type="email" id="email" name="" placeholder="Username">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-lock inputicon"></i>
+								<input class="form-control" type="password" id="password" name="" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<button type="button" class="btn submitbtn" onclick="loginInfo()">Login</button>
+								<p class="text-center mt-4"><a target="_blank" href="https://www.yumpu.com/en/document/read/63142334/a-blockchain-based-smart-tenancy-agreement">Read Terms & Conditions</a></p>
+								<p class="text-center mt-4">Don't have account? <a href="form.html">Register</a></p>
+							</div>
+						</div>
+					</form>
+				</main>
+		
+			</section>
+		</div>
+		<script type="text/javascript">
+			function loginInfo() {
+
+				var email = document.getElementById("email").value;
+				var password = document.getElementById("password").value;
+				console.log({"email":email,"password":password})
+				jQuery.ajax({
+					type : "POST",
+					dataType : "json",
+					contentType: "application/json; charset=UTF-8",
+					url : 'https://bitbrowze.com/main/users/login',
+					async: false,
+					data : JSON.stringify({email,password}),
+					success: function(response) {
+						console.log("ajax-response", response);
+						var stringified = JSON.stringify(response);
+						var parsedObj = JSON.parse(stringified);
+						console.log("parsedObj", parsedObj);
+
+						if(parsedObj.code) {
+							alert("user already registered")
+						} else {
+							alert("user registered successfully")
+						}
+					},
+					error: function(err) {
+						console.log(err)
+						if(err.status == 206) {
+							alert("password incorrect")
+						} else if(err.status == 205){
+							alert("email incorrect")
+						} else if(err.status == 200){
+							window.location.href="https://xdale.io/welcome/";
+						}
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
