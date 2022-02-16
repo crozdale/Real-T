@@ -1,0 +1,46 @@
+{
+  "name": "real-t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "start": "babel-node Server.js ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon --exec babel-node Server.js\" \"cd Client/Real-T/ && npm start\" \"cd Client/Xeries/ && npm start\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crozdale/realT.git"
+  },
+  "keywords": [],
+  "author": "Mohamed Tarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crozdale/realT/issues"
+  },
+  "homepage": "https://github.com/crozdale/realT#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.4",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.1",
+    "i": "^0.3.6",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.19",
+    "nodemailer": "^6.4.11",
+    "npm": "^6.14.6",
+    "xss": "^1.0.7"
+  }
+}
