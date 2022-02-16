@@ -1,0 +1,3 @@
+# Our-Block-
+
+OUR-BLOCK is a Mult-level Subscription to the XDALE Directory. The first subscriber can choose to "Do Work"; or not. Every subscriber is automatically linked to a unique WALLET with public and private KEYS. "Doing Work" means (1) nominating THREE or more personal acquaintances to become subscribers to OUR BLOCK. (2) Explaining the features and benefits of membership. Once this is achieved the "Work is Done". The first subscriber then becomes "An Ancestor". All transactions (to 10 generations of DESCENDANTS) that is done via the XDALE Directory automatically returns an AMOUNT to the wallet of the subscriber as well as to his Ancestors' wallet.The AMOUNT is calculated in fractions of bitcoin. 
