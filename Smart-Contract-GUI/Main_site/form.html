@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://bitbrowze.com/real-t/static/css/main.c860e462.chunk.css" rel="stylesheet">
+	<link href="https://bitbrowze.com/real-t/static/css/2.cae63205.chunk.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+	<body>
+		<div id="root">
+			<section class="Register_section__2t0JM">
+				<main class="MuiContainer-root MuiContainer-maxWidthLg">
+					<h4 class="MuiTypography-root MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter mt-5">SIGN UP</h4>
+					<form class="signupform my-5">
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-user inputicon"></i>
+								<input class="form-control" type="text" id="firstName" name="firstName" placeholder="First Name">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-user inputicon"></i>
+								<input class="form-control" type="text" id="surname" name="surname" placeholder="Sur Name">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-user-plus inputicon"></i>
+								<input class="form-control" type="text" id="username" name="username" placeholder="Username">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-user-plus inputicon"></i>
+								<input class="form-control" type="text" id="messgerapp" name="messgerapp" placeholder="Messager App">
+							</div>
+							<span class="noted">Note: Optional Anonymous Account</span>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-envelope-o inputicon"></i>
+								<input class="form-control" type="email" id="email" name="email" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-home inputicon"></i>
+								<input class="form-control" type="text" id="address" name="address" placeholder="Ethereum Address">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-lock inputicon"></i>
+								<input class="form-control" type="password" id="password" name="password" placeholder="Password">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<i class="fa fa-lock inputicon"></i>
+								<input class="form-control" type="password" id="cpassword" name="" placeholder="Confirm Password">
+							</div>
+						</div>
+						<div class="form-group mb-4">
+							<div class="field-inner">
+								<button type="button" onclick="saveInfo()" class="btn submitbtn">REGISTER</button>
+								<p class="text-center mt-4">Have an account? <a href="login.html">Login</a></p>
+							</div>
+						</div>
+					</form>
+				</main>
+			</section>
+		</div>
+		<script type="text/javascript">
+			function saveInfo() {
+
+				var firstName = document.getElementById("firstName").value;
+				var surname = document.getElementById("surname").value;
+				var username = document.getElementById("username").value;
+				var email = document.getElementById("email").value;
+				var address = document.getElementById("address").value;
+				var password = document.getElementById("password").value;
+				var messgerapp = document.getElementById("messgerapp").value;
+				console.log({"firstName":firstName,"surname":surname,"username":username,"email":email,"address":address,"password":password,"role":"buyer"})
+				jQuery.ajax({
+					type : "POST",
+					dataType : "json",
+					contentType: "application/json; charset=UTF-8",
+					url : 'https://bitbrowze.com/main/users',
+					async: false,
+					data : JSON.stringify({firstName,surname,username,messgerapp,email,address,password,role:"buyer"}),
+					success: function(response) {
+						console.log("ajax-response", response);
+						var stringified = JSON.stringify(response);
+						var parsedObj = JSON.parse(stringified);
+						console.log("parsedObj", parsedObj);
+
+						if(parsedObj.code) {
+							alert("user already registered")
+						} else {
+							alert("user registered successfully")
+						}
+					},
+					error: function(err) {
+						console.log(err)
+						if(err.status == 421) {
+							console.log(err.responseJSON.keyPattern)
+							var text = Object.keys(err.responseJSON.keyPattern)[0]
+							alert(text + " already exists")
+						} else if(err.status == 422){
+							alert("some validation error")
+						} else if(err.status == 200){
+							alert("user registered successfully")
+						}
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
