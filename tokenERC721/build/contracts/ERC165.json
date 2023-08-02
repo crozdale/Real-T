@@ -1,5 +1,5 @@
 {
-  "contractName": "ERC165",
+  "contractName": "ERC1165",
   "abi": [
     {
       "inputs": [],
