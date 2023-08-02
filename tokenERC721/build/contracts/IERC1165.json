@@ -1,5 +1,5 @@
 {
-  "contractName": "IERC165",
+  "contractName": "IERC1165",
   "abi": [
     {
       "constant": true,
